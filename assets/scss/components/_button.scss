@@ -1,0 +1,26 @@
+.button {
+	padding-top: 60px;
+	position: relative;
+	margin: 0 auto;
+	width: 320px;
+	&:hover &_rect {
+		@include dash(760, 0, 2px);
+	}
+	&_rect {
+		fill: transparent;
+		stroke: $color_4;
+		border-bottom: 5px $color_4 solid;
+		transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+		@include dash(140 540, -474, 8px);
+	}
+	&_text {
+		position: relative;
+		text-align: center;
+		font-size: 2em;
+		line-height: 32px;
+		text-transform: uppercase;
+		letter-spacing: 8px;
+		color: $color_1;
+		top: -48px;
+	}
+}

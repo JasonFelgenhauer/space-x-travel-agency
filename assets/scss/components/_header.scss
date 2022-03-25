@@ -1,0 +1,51 @@
+.header {
+	&_top {
+		padding: 5px 0 0 10px;
+		z-index: 10;
+		position: relative;
+		h1 {
+			font-family: $font_2;
+			font-size: 2.8em;
+			font-weight: 100;
+			text-transform: uppercase;
+			padding-left: 10px;
+			color: $color_4;
+			text-shadow: 2px 2px 0px $color_2, 4px 4px 0px $color_3, 4px 4px 6px $color_4;
+		}
+	}
+	&_bottom {
+		z-index: 15;
+		position: absolute;
+		top: 4px;
+		right: 10px;
+		li {
+			display: inline;
+			padding: 0 15px;
+			border-left: 3px $color_1 solid;
+			transition: 0.3s ease-in-out;
+			&:hover {
+				border: 2px $color_1 solid;
+			}
+			&:active {
+				border: 5px $color_1 solid;
+			}
+		}
+	}
+	.line {
+		width: 85%;
+		height: 100px;
+		border: 1px $color_1 solid;
+		border-radius: 45% / 60px 100px 0 0;
+		border-color: $color_4 transparent transparent transparent;
+		position: absolute;
+		top: 80px;
+		top: 13%;
+	}
+	@media (max-width: 799px) {
+		&_bottom {
+			li {
+				display: none;
+			}
+		}
+	}
+}

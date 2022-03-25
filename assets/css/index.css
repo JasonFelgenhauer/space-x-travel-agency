@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Megrim&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f0f0;
+}
+
+a:visited {
+  color: #f3f0f0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  font-family: "Baumans", cursive;
+  color: #f3f0f0;
+  background: url("../../assets/img/background.jpg") no-repeat;
+  background-size: cover;
+}
+
+body:before {
+  content: '';
+  background: #000000;
+  background: linear-gradient(168deg, #000000 0%, transparent 100%);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+@-webkit-keyframes sliders {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    right: 200%;
+  }
+  75% {
+    right: 100%;
+  }
+  95% {
+    right: 100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes sliders {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    right: 200%;
+  }
+  75% {
+    right: 100%;
+  }
+  95% {
+    right: 100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+.header_top {
+  padding: 5px 0 0 10px;
+  z-index: 10;
+  position: relative;
+}
+
+.header_top h1 {
+  font-family: "Megrim", cursive;
+  font-size: 2.8em;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding-left: 10px;
+  color: #fa9e1e;
+  text-shadow: 2px 2px 0px #84c1ff, 4px 4px 0px #ff1808, 4px 4px 6px #fa9e1e;
+}
+
+.header_bottom {
+  z-index: 15;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+
+.header_bottom li {
+  display: inline;
+  padding: 0 15px;
+  border-left: 3px #f3f0f0 solid;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.header_bottom li:hover {
+  border: 2px #f3f0f0 solid;
+}
+
+.header_bottom li:active {
+  border: 5px #f3f0f0 solid;
+}
+
+.header .line {
+  width: 85%;
+  height: 100px;
+  border: 1px #f3f0f0 solid;
+  border-radius: 45% / 60px 100px 0 0;
+  border-color: #fa9e1e transparent transparent transparent;
+  position: absolute;
+  top: 80px;
+  top: 13%;
+}
+
+@media (max-width: 799px) {
+  .header_bottom li {
+    display: none;
+  }
+}
+
+.carousel {
+  width: 20%;
+  border-radius: 0 0 15px 15px;
+  margin: -20px auto 20px auto;
+  overflow: hidden;
+  -webkit-box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
+          box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
+}
+
+.carousel_figure {
+  position: relative;
+  width: 300%;
+  font-size: 0;
+  -webkit-animation: 10s sliders infinite;
+          animation: 10s sliders infinite;
+}
+
+.carousel_figure_pic {
+  width: 33.33%;
+  height: auto;
+  float: left;
+}
+
+@media (max-width: 840px) {
+  .carousel {
+    display: none;
+  }
+}
+
+.offers {
+  padding-top: 50px;
+}
+
+.offers_perspective {
+  width: 100%;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offers_perspective_3d {
+  width: 140px;
+  height: 200px;
+  margin: auto;
+  -webkit-box-shadow: 0 70px 63px -60px #494848;
+          box-shadow: 0 70px 63px -60px #494848;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.05s linear;
+  transition: -webkit-transform 0.05s linear;
+  transition: transform 0.05s linear;
+  transition: transform 0.05s linear, -webkit-transform 0.05s linear;
+}
+
+.offers_perspective_3d_card {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.offers_perspective_3d_card h2 {
+  position: absolute;
+  top: 0;
+  font-size: 1.1em;
+  font-weight: 100;
+  -webkit-transform: translateZ(80px);
+          transform: translateZ(80px);
+  text-transform: uppercase;
+}
+
+.offers_perspective_3d_card span {
+  position: absolute;
+  bottom: 40px;
+  right: -10px;
+  font-size: 0.8em;
+  font-weight: 600;
+  -webkit-transform: translateZ(35px);
+          transform: translateZ(35px);
+}
+
+.offers_perspective_3d_card:after {
+  background: inherit;
+  content: '';
+  display: block;
+  position: absolute;
+  left: -60px;
+  top: 40px;
+  width: 100%;
+  height: 85%;
+  z-index: -1;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+}
+
+.button {
+  padding-top: 60px;
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+}
+
+.button:hover .button_rect {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 0;
+  stroke-width: 2px;
+}
+
+.button_rect {
+  fill: transparent;
+  stroke: #fa9e1e;
+  border-bottom: 5px #fa9e1e solid;
+  -webkit-transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+}
+
+.button_text {
+  position: relative;
+  text-align: center;
+  font-size: 2em;
+  line-height: 32px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #f3f0f0;
+  top: -48px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  right: 10%;
+}
+
+footer .network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.3em;
+  font-family: "Megrim", cursive;
+}
+
+footer .network a {
+  padding: 0px 25px;
+}
+
+footer .network a:hover {
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  text-shadow: 0 0 5px #f3f0f0, 0 0 10px #f3f0f0, 0 0 15px #f3f0f0, 0 0 20px #fa9e1e, 0 0 30px #fa9e1e, 0 0 40px #fa9e1e, 0 0 55px #fa9e1e, 0 0 75px #fa9e1e;
+}
+
+footer .network a:hover:nth-child(5) {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  font-weight: bolder;
+}
+
+@media (max-width: 840px) {
+  footer .network a {
+    padding: 0 5px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,31 @@
+footer {
+	position: absolute;
+	bottom: 20px;
+	left: 10%;
+	right: 10%;
+	.network {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.3em;
+		font-family: $font_2;
+		a {
+			padding: 0px 25px;
+			&:hover {
+				transform: scale(2.5);
+				transition: 0.4s ease-out;
+				text-shadow: 0 0 5px $color_1, 0 0 10px $color_1, 0 0 15px $color_1, 0 0 20px $color_4, 0 0 30px $color_4, 0 0 40px $color_4, 0 0 55px $color_4, 0 0 75px $color_4;
+				&:nth-child(5) {
+					transform: scale(1.5);
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+	@media (max-width: 840px) {
+		.network {
+			a {
+				padding: 0 5px;
+			}
+		}
+	}
+}
